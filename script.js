@@ -43,7 +43,7 @@ const animals = [
     { name: 'Squirrel', image: 'squirrel.jpg' },
     { name: 'Water buffalo', image: 'waterbuffalo.jpg' },
     { name: 'Goose', image: 'goose.jpg' },
-    { name: 'Porcupine', image: 'porcupine.jpg' }
+    { name: 'Porcupine', image: 'image.png' }
     
 ];
 
