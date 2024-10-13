@@ -12,7 +12,6 @@ const animals = [
     { name: 'Rabbit', image: 'rabbit.jpg' },
     { name: 'Giraffe', image: 'giraffe.jpg' },
     { name: 'Zebra', image: 'zebra.jpg' },
-    { name: 'Kangaroo', image: 'kangaroo.jpg' },
     { name: 'Panda', image: 'panda.jpg' },
     { name: 'Tiger', image: 'tiger.jpg' },
     { name: 'Koala', image: 'koala.jpg' },
@@ -29,7 +28,6 @@ const animals = [
     { name: 'Turtle', image: 'turtle.jpg' },
     { name: 'Pig', image: 'pig.jpg' },
     { name: 'Owl', image: 'owl.jpg' },
-    { name: 'Turtle', image: 'turtle.jpg' },
     { name: 'Frog', image: 'frog.jpg' },
     { name: 'Leopard', image: 'leopard.jpg' },
     { name: 'Bat', image: 'bat.jpg' },
@@ -39,13 +37,14 @@ const animals = [
     { name: 'Duck', image: 'duck.jpg' },
     { name: 'Sheep', image: 'sheep.jpg' },
     { name: 'Goat', image: 'goat.jpg' },
-    { name: 'Sheep', image: 'sheep.jpg' },
     { name: 'Parrot', image: 'parrot.jpg' },
     { name: 'Bee', image: 'bee.jpg' },
     { name: 'Mouse', image: 'mouse.jpg' },
     { name: 'Squirrel', image: 'squirrel.jpg' },
     { name: 'Water buffalo', image: 'waterbuffalo.jpg' },
-    { name: 'Goose', image: 'goose.jpg' }
+    { name: 'Goose', image: 'goose.jpg' },
+    { name: 'Porcupine', image: 'porcupine.jpg' }
+    
 ];
 
 // Variables for tracking the current level and shuffled order of animals
@@ -136,6 +135,58 @@ function getRandomOptions(arr, count) {
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
 }
+
+// Example function to change the image dynamically
+function changeAnimalImage(animalName) {
+    const animalImage = document.getElementById('animalImage');
+    animalImage.src = `resource/${animalName}.jpg`; // dynamically setting the image source
+    animalImage.alt = animalName; // update the alt text
+}
+
+// Call this function to change the image to an elephant, for example:
+changeAnimalImage('Elephant');
+changeAnimalImage('Bird');
+changeAnimalImage('Cat');
+changeAnimalImage('Dog');
+changeAnimalImage('Fish');
+changeAnimalImage('Horse');
+changeAnimalImage('Lion');
+changeAnimalImage('Monkey');
+changeAnimalImage('Penguin');
+changeAnimalImage('Rabbit');
+changeAnimalImage('Giraffe');
+changeAnimalImage('Zebra');
+changeAnimalImage('Kangaroo');
+changeAnimalImage('Panda');
+changeAnimalImage('Tiger');
+changeAnimalImage('Koala');
+changeAnimalImage('Deer');
+changeAnimalImage('Crocodile');
+changeAnimalImage('Fox');
+changeAnimalImage('Dolphin');
+changeAnimalImage('Shark');
+changeAnimalImage('Bear');
+changeAnimalImage('Wolf');
+changeAnimalImage('Snake');
+changeAnimalImage('Turtle');
+changeAnimalImage('Pig');
+changeAnimalImage('Owl');
+changeAnimalImage('Frog');
+changeAnimalImage('Leopard');
+changeAnimalImage('Bat');
+changeAnimalImage('Hippo');
+changeAnimalImage('Camel');
+changeAnimalImage('Chicken');
+changeAnimalImage('Duck');
+changeAnimalImage('Sheep');
+changeAnimalImage('Goat');
+changeAnimalImage('Parrot');
+changeAnimalImage('Bee');
+changeAnimalImage('Mouse');
+changeAnimalImage('Squirrel');
+changeAnimalImage('Water Buffalo');
+changeAnimalImage('Goose');
+changeAnimalImage('Porcupine');
 
 // Start the game once the window loads
 window.onload = startGame;
