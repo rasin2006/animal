@@ -43,7 +43,8 @@ const animals = [
     { name: 'Squirrel', image: 'squirrel.jpg' },
     { name: 'Water buffalo', image: 'waterbuffalo.jpg' },
     { name: 'Goose', image: 'goose.jpg' },
-    { name: 'Porcupine', image: 'image.png' }
+    { name: 'Porcupine', image: 'image.png' },
+    { name: 'Spider', image: 'spider.jpeg' }
     
 ];
 
@@ -57,6 +58,9 @@ function startGame() {
     loadLevel(currentLevel);
     // Add click event listener to animal image for speech
     document.getElementById('animalImage').addEventListener('click', speakAnimalName);
+    const animal = animals[shuffledLevels[currentLevel]];
+    const utterance = new SpeechSynthesisUtterance(animal.name);
+    speechSynthesis.speak(utterance);
 }
 
 // Function to load each level randomly
@@ -123,6 +127,9 @@ function nextLevel() {
     currentLevel = (currentLevel + 1) % animals.length;
     if (currentLevel === 0) shuffledLevels = shuffleArray([...Array(animals.length).keys()]);
     loadLevel(currentLevel);
+    const animal = animals[shuffledLevels[currentLevel]];
+    const utterance = new SpeechSynthesisUtterance(animal.name);
+    speechSynthesis.speak(utterance);
 }
 
 // Helper function to get random options from the wrong answers
